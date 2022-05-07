@@ -29,7 +29,7 @@ Host ieng6
 
 ![1.4](1.4-login.png)
 
-* Then, I used the `scp` command with **scp [file name] ieng6:~/** to copy a file from local computer to the server.
+* Then, I used the 'scp' command as `scp [file name] ieng6:~/` to copy a file from local computer to the server.
 
 ![1.5](1.5-scp.png)
 
