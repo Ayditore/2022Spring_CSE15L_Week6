@@ -48,7 +48,7 @@ Host ieng6
 
 ![2.2](2.2-push_error_message.png)
 
-* To solve this issue, I generated a new public key in server by using the code of `ssh-keygen -t rsa -C "[github email]":
+* To solve this issue, I generated a new public key in server by using the code of `ssh-keygen -t rsa -C "[github email]"`:
 
 ![2.3](2.3-gen_key.png)
 
@@ -81,13 +81,15 @@ Host ieng6
 ![2.10](2.10-ssh_push.png)
 ![2.10b](2.10b-ssh_push.png)
 
-[link to repo with hello.txt](https://github.com/Ayditore/markdown-parser)
+[**Link to repo with hello.txt**](https://github.com/Ayditore/markdown-parser)
 
 ---
 ## Copy whole directories with `scp -r`
 * First, I copied a **markdown-parse** directory to the the server by using following code:
 
-```scp -r . cs15lsp22ams@ieng6.ucsd.edu:~/markdown-parse```
+```
+scp -r . cs15lsp22ams@ieng6.ucsd.edu:~/markdown-parse
+```
 
 ![3.1](3.1_scp-r.png)
 
@@ -97,14 +99,18 @@ Host ieng6
 
 * Now run the JUnit test directly on the server by using the code:
 
-```cd markdown-parse; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest```
+```
+cd markdown-parse; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
+```
 
 *The result is
 ![3.3](3.3-oneline.png)
 
 * Then, to improve the efficiency of code, I combined `scp`, `;`, and `ssh` to copy the whole directory and run the tests in one line.
 
-```ssh ieng6 "scp -r . cs15lsp22ams@ieng6.ucsd.edu:~/markdown-parse; cd markdown-parse; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"```
+```
+ssh ieng6 "scp -r . cs15lsp22ams@ieng6.ucsd.edu:~/markdown-parse; cd markdown-parse; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"
+```
 
 * Then, after running this one line command, the same result will appear.
 
