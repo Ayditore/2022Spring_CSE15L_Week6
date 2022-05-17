@@ -118,5 +118,7 @@ ssh ieng6 "scp -r . cs15lsp22ams@ieng6.ucsd.edu:~/markdown-parse; cd markdown-pa
 
 * Then, after running this one line command, the same result will appear.
 
+*The last two pictures are updated based on feedback*
+
 ![3.4](3.4-oneline.png)
 ![3.4b](3.4b-oneline_result.png)
