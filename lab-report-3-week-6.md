@@ -81,7 +81,7 @@ Host ieng6
 ![2.10](2.10-ssh_push.png)
 ![2.10b](2.10b-ssh_push.png)
 
-## update
+## Update
 _**Link to the page where I commited "hello.txt" to the repo**_  
 [Link to commit history](https://github.com/Ayditore/markdown-parser/commit/9d4511ea13138ddf79399a25c4237592c350fa1c)  
 
@@ -118,7 +118,7 @@ ssh ieng6 "scp -r . cs15lsp22ams@ieng6.ucsd.edu:~/markdown-parse; cd markdown-pa
 
 * Then, after running this one line command, the same result will appear.
 
-## update
+## Update
 _**The last two pictures are updated based on feedback**_  
 ![3.4](3.4-oneline.png)
 ![3.4b](3.4b-oneline_result.png)
